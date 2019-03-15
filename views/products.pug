@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .container
+    h1= title
+    .row
+      each product in products
+        .col-sm
+          h4= product.name
+          h6.text-green= product.price
+          p= product.description
+          a.btn.btn-secondary(href=`/products/${product.id}`) View More Details
